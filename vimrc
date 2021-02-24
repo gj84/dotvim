@@ -1,8 +1,12 @@
-set number " relativenumber
-set nocompatible
-" set clipboard=unnamedplus
-" number lines color
+set number 
+" Toggle relative numbers and relative numbers
+map <Leader>n :set relativenumber!<CR> 
+map <Leader>N :set number!<CR> 
+" Number lines color
 highlight LineNr ctermfg=8
+
+set nocompatible
+set clipboard=unnamed
 
 set colorcolumn=80 
 highlight ColorColumn ctermbg=233
@@ -10,19 +14,30 @@ highlight ColorColumn ctermbg=233
 filetype plugin on
 filetype plugin indent on
 
-
-set ls=2 " show status bar
+" Show status bar
+set ls=2 
 
 " Highlight searches
 set hlsearch
 set nowrapscan
 set incsearch
-map <Leader><Esc> :nohlsearch<CR> " Take the hightlight off
+
+" Take the hightlight off
+map <Leader><Esc> :nohlsearch<CR> 
 highlight Search ctermbg=26
 
-set scrolloff=2 " the cursor remains 2 lines up/down the botom/top while j/k
+set scrolloff=2 " Cursor remains 2 lines up/down the botom/top while j/k
 
-set history=300 " command mode history
+set history=300 " Command mode history
 
-" mouse
+" Mouse
 set mouse=a
+
+" Insert blank lines above/below cursor 
+" without leaving the current line
+map <Leader>o o<Esc>k
+map <Leader>O O<Esc>j
+
+" Directory to store swap files
+set directory^=$HOME/.vim/dirs/tmp//
+
