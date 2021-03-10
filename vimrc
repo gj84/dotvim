@@ -23,7 +23,7 @@ set nowrapscan
 set incsearch
 
 " Take the hightlight off
-map <Leader><Esc> :nohlsearch<CR> 
+map <Leader><Esc> :set hlsearch!<CR> 
 highlight Search ctermbg=26
 
 set scrolloff=2 " Cursor remains 2 lines up/down the botom/top while j/k
@@ -41,3 +41,5 @@ map <Leader>O O<Esc>j
 " Directory to store swap files
 set directory^=$HOME/.vim/dirs/tmp//
 
+" Snipet for tabs and indentation
+map <Leader>T :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
