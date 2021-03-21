@@ -1,7 +1,16 @@
+" Place to change mapleader
+let mapleader = '\'
+
+" Edit vimrc on the fly
+nmap <Leader>V :vsplit $MYVIMRC<CR>
+
+colorscheme ron "torte
+
 set number 
 " Toggle relative numbers and relative numbers
 map <Leader>n :set relativenumber!<CR> 
 map <Leader>N :set number!<CR> 
+
 " Number lines color
 highlight LineNr ctermfg=8
 
@@ -38,8 +47,18 @@ set mouse=a
 map <Leader>o o<Esc>k
 map <Leader>O O<Esc>j
 
+" Split line at current cursor position (invers capital J)
+nmap <Leader>J i<CR><Esc>
+
 " Directory to store swap files
 set directory^=$HOME/.vim/dirs/tmp//
 
 " Snipet for tabs and indentation
 map <Leader>T :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+
+if has("autocmd")
+  autocmd bufwritepost vimrc source $MYVIMRC 
+endif
+
+
+
