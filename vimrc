@@ -79,6 +79,7 @@ call minpac#add('k-takata/minpac', {'type': 'opt'})
 call minpac#add('preservim/nerdtree')
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-surround')
+call minpac#add('mattn/emmet-vim')
 
 " Call it when installing 
 function! Call2Minpac()
