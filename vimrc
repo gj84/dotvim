@@ -56,6 +56,12 @@ set directory^=$HOME/.vim/dirs/tmp//
 " Snipet for tabs and indentation
 map <Leader>T :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
+" Autoclose '"([{
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
 
 if has("autocmd")
   autocmd bufwritepost vimrc source $MYVIMRC 
