@@ -81,7 +81,7 @@ call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-surround')
 
 " Call it when installing 
-function Call2Minpac()
+function! Call2Minpac()
   call minpac#update()
   call minpac#clean()
   call minpac#status()
