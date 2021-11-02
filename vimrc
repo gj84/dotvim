@@ -62,6 +62,7 @@ inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
+inoremap < <><left>
 
 if has("autocmd")
   autocmd bufwritepost vimrc source $MYVIMRC 
