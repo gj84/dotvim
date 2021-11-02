@@ -61,4 +61,13 @@ if has("autocmd")
 endif
 
 
+" Try to load minpac
+packadd minpac
 
+if !exists('g:loaded_minpac')
+  " minpac is not available
+  echo "Cannot load minpac"
+else
+  call minpac#init({'verbose': 3})
+  call minpac#add('k-takata/minpac', {'type': 'opt'})
+endif
