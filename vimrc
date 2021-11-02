@@ -56,6 +56,7 @@ set directory^=$HOME/.vim/dirs/tmp//
 " Snipet for tabs and indentation
 map <Leader>T :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 
+
 if has("autocmd")
   autocmd bufwritepost vimrc source $MYVIMRC 
 endif
@@ -64,10 +65,17 @@ endif
 " Try to load minpac
 packadd minpac
 
-if !exists('g:loaded_minpac')
-  " minpac is not available
-  echo "Cannot load minpac"
-else
-  call minpac#init({'verbose': 3})
-  call minpac#add('k-takata/minpac', {'type': 'opt'})
-endif
+call minpac#init()
+call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+" Additional plugins here.
+call minpac#add('preservim/nerdtree')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('tpope/vim-surround')
+
+" Call it when installing 
+function Call2Minpac()
+  call minpac#update()
+  call minpac#clean()
+  call minpac#status()
+endfunction
