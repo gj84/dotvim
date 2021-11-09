@@ -54,7 +54,8 @@ nmap <Leader>J i<CR><Esc>
 set directory^=$HOME/.vim/dirs/tmp//
 
 " Snipet for tabs and indentation
-map <Leader>T :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+map <Leader>2<Tab> :set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+map <Leader>4<Tab> :set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 " Autoclose '"([{
 inoremap " ""<left>
