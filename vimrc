@@ -80,6 +80,7 @@ call minpac#add('preservim/nerdtree')
 call minpac#add('tpope/vim-commentary')
 call minpac#add('tpope/vim-surround')
 call minpac#add('mattn/emmet-vim')
+call minpac#add('vim-scripts/synic.vim')
 
 " Call it when installing 
 function! Call2Minpac()
@@ -87,3 +88,5 @@ function! Call2Minpac()
   call minpac#clean()
   call minpac#status()
 endfunction
+
+colorscheme synic
