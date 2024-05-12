@@ -70,24 +70,24 @@ if has("autocmd")
 endif
 
 
-" Try to load minpac
-packadd minpac
+-- " Try to load minpac
+-- packadd minpac
 
-call minpac#init()
-call minpac#add('k-takata/minpac', {'type': 'opt'})
+-- call minpac#init()
+-- call minpac#add('k-takata/minpac', {'type': 'opt'})
 
-" Additional plugins here.
-call minpac#add('preservim/nerdtree')
-call minpac#add('tpope/vim-commentary')
-call minpac#add('tpope/vim-surround')
-call minpac#add('mattn/emmet-vim')
-call minpac#add('vim-scripts/synic.vim')
+-- " Additional plugins here.
+-- call minpac#add('preservim/nerdtree')
+-- call minpac#add('tpope/vim-commentary')
+-- call minpac#add('tpope/vim-surround')
+-- call minpac#add('mattn/emmet-vim')
+-- call minpac#add('vim-scripts/synic.vim')
 
-" Call it when installing 
-function! Call2Minpac()
-  call minpac#update()
-  call minpac#clean()
-  call minpac#status()
-endfunction
+-- " Call it when installing 
+-- function! Call2Minpac()
+--   call minpac#update()
+--   call minpac#clean()
+--   call minpac#status()
+-- endfunction
 
 colorscheme synic
